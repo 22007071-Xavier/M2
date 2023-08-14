@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xinsurto</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo">
+      <img src="Logo.jpg" alt="XIN">
+      <span>Xinsurto</span>
+    </div>
+    <div class="buttons">
+      <a href="HomepageGA.html" class="button">Home</a>
+      <a href="aboutus.html" class="button">About Us</a>
+      <a href="login.html" class="button">Login</a>
+      <a href="signup.html" class="button">Sign Up</a>
+      <a href="FAQS.html" class="button">FAQs</a>
+    </div>
+  </header>
+
+  <div class="credit-card-form">
+    <h1>Enter Credit Card Information</h1>
+    <form>
+      <div class="input-group">
+        <label for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+      </div>
+      <div class="input-group">
+        <label for="cardHolder">Cardholder Name:</label>
+        <input type="text" id="cardHolder" name="cardHolder" placeholder="John Doe" required>
+      </div>
+      <div class="input-group">
+        <label for="expiryDate">Expiration Date:</label>
+        <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+      </div>
+      <div class="input-group">
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="123" required>
+      </div>
+
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Xinsurto Company. All rights reserved.</p>
+  </footer>
+  <script>
+    const creditCardForm = document.querySelector('.credit-card-form form');
+    creditCardForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      window.location.href = 'paymentconfirmed.html';
+    });
+  </script>
+</body>
+</html>

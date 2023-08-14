@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insurance Selection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo">
+      <img src="Logo.jpg" alt="XIN">
+      <span>Xinsurto</span>
+    </div>
+    <div class="buttons">
+      <a href="HomepageGA.html" class="button">Home</a>
+      <a href="aboutus.html" class="button">About Us</a>
+      <a href="products.html" class="button">Products</a>
+      <a href="login.html" class="button">Login</a>
+      <a href="signup.html" class="button">Sign Up</a>
+      <a href="FAQS.html" class="button">FAQs</a>
+    </div>
+  </header>
+  
+  <header>
+    <h1>You Have Chosen Property Insurance</h1>
+  </header>
+  
+  <label for="Plan">Choose A Plan:</label>
+  <select id="insuranceType" name="insuranceType">
+    <option value="saving">SuperSaver $88</option>
+    <option value="PremiumPlus">PremiumPlus $188</option>
+    <option value="value">ValuePounder $50</option>
+  </select>
+  
+  <p>Your selected insurance type: <span id="selectedInsurance"></span></p>
+  
+  <a href="payment.html" class="paynowbutton">Pay Now</a>
+  
+  <footer>
+    <p>&copy; 2023 Xinsurto Company. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    const insuranceSelect = document.getElementById('insuranceType');
+    const selectedInsuranceSpan = document.getElementById('selectedInsurance');
+    
+    insuranceSelect.addEventListener('change', function() {
+      selectedInsuranceSpan.textContent = insuranceSelect.options[insuranceSelect.selectedIndex].text;
+    });
+  </script>
+</body>
+</html>
